@@ -1,6 +1,6 @@
 // Saves options to chrome.storage.sync.
 function save_options() {
-  var color = document.getElementById('rpl').value;
+  var rpl = document.getElementById('rpl').value;
   chrome.storage.sync.set({
     replacementText: rpl
   }, function() {
@@ -20,7 +20,7 @@ function restore_options() {
   chrome.storage.sync.get({
     replacementText: 'butt',
   }, function(items) {
-    document.getElementById('rpl').value = items.favoriteColor;
+    document.getElementById('rpl').value = items.rpl;
   });
 }
 document.addEventListener('DOMContentLoaded', restore_options);
