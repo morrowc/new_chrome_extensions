@@ -6,7 +6,7 @@
 body: { padding: 10px; }
 </style>
   </head>
-  <body>
+  <body onLoad="loadOptions()">
     Replacement Text:
     <select id="rpl">
       <option value="butt"> butt</option>
@@ -15,7 +15,7 @@ body: { padding: 10px; }
       <option value="Cheetos Tinged Ape">Cheetos Tinged Ape</option>
     </select>
     <div id="status"</div>
-    <button id="save">Save</button>
+    <button id="save" onClick="saveOptions()">Save</button>
     <script src="options.js"></script>
   </body>
 </html>

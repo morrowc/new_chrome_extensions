@@ -1,5 +1,5 @@
 // Saves options to chrome.storage.sync.
-function save_options() {
+function saveOptions() {
   var rpl = document.getElementById('rpl').value;
   chrome.storage.sync.set({
     replacementText: rpl
@@ -15,7 +15,7 @@ function save_options() {
 
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
-function restore_options() {
+function loadOptions() {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
     replacementText: 'butt',
@@ -23,6 +23,5 @@ function restore_options() {
     document.getElementById('rpl').value = items.rpl;
   });
 }
-document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('save').addEventListener('click',
-    save_options);
+// document.addEventListener('DOMContentLoaded', loadOption);
+// document.getElementById('save').addEventListener('click', saveOptions);
