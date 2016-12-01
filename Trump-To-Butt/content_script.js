@@ -1,5 +1,11 @@
 walk(document.body);
 
+var rpl = "butt";
+function loadRpl() {
+  var rpl = localStorage["rpl"];
+  return rpl;
+}
+
 function walk(node) 
 {
 	// I stole this function from here:
@@ -31,7 +37,8 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bTrump\b/g, "Butt");
+  rpl = loadRpl();
+	v = v.replace(/\bTrump\b/g, rpl);
 	
 	textNode.nodeValue = v;
 }
