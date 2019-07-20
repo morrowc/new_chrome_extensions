@@ -41,6 +41,7 @@ function handleText(textNode)
   // LocalStorage isn't working as I'd expect, so set a default.
   if ( rpl == undefined ) { rpl = "Butt"; }
 	v = v.replace(/\bTrump\b/g, rpl);
+	v = v.replace(/\bTrump's\b/g, rpl);
 	
 	textNode.nodeValue = v;
 }
