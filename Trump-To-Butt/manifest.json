@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "Trump-To-Butt",
-	"version": "0.1",
+	"version": "1.0",
 	"description": "Replaces the text 'Trump' with 'Butt'",
 	"content_scripts": 
 	[
